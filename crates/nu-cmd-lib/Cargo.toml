@@ -1,0 +1,45 @@
+[package]
+authors = ["The Nushell Project Developers"]
+build = "build.rs"
+description = "Nushell's env and system language commands"
+repository = "https://github.com/nushell/nushell/tree/main/crates/nu-cmd-lib"
+edition = "2021"
+license = "MIT"
+name = "nu-cmd-lib"
+version = "0.76.1"
+
+[lib]
+bench = false
+
+[dependencies]
+nu-ansi-term = "0.46.0"
+nu-cmd-lang = { path = "../nu-cmd-lang", version = "0.76.1" }
+nu-color-config = { path = "../nu-color-config", version = "0.76.1" }
+nu-engine = { path = "../nu-engine", version = "0.76.1" }
+nu-parser = { path = "../nu-parser", version = "0.76.1" }
+nu-path = { path = "../nu-path", version = "0.76.1" }
+nu-protocol = { path = "../nu-protocol", version = "0.76.1"  }
+nu-system = { path = "../nu-system", version = "0.76.1" }
+nu-utils = { path = "../nu-utils", version = "0.76.1" }
+
+chrono = { version = "0.4.23", features = ["std", "unstable-locales"], default-features = false }
+pathdiff = "0.2.1"
+sysinfo = "0.28.0"
+
+### These were here for nu-cmd-lang, not sure if they are relevant for nu-cmd-lib
+fancy-regex = "0.11.0"
+itertools = "0.10.0"
+log = "0.4.14"
+shadow-rs = { version = "0.20.0", default-features = false }
+
+[target.'cfg(windows)'.dependencies]
+winreg = "0.11.0"
+
+[target.'cfg(unix)'.dependencies]
+libc = "0.2"
+
+[build-dependencies]
+shadow-rs = { version = "0.20.0", default-features = false }
+
+[dev-dependencies]
+nu-test-support = { path="../nu-test-support", version = "0.76.1"  }

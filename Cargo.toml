@@ -15,12 +15,14 @@ version = "0.76.1"
 [workspace]
 members = [
 	"crates/nu-cli",
+	"crates/nu-cmd-lang",
+	"crates/nu-cmd-lib",
 	"crates/nu-engine",
 	"crates/nu-parser",
-	"crates/nu-system",
-	"crates/nu-cmd-lang",
+	"crates/nu-path",
+	"crates/nu-plugin",	
 	"crates/nu-protocol",
-	"crates/nu-plugin",
+	"crates/nu-system",
 	"crates/nu-utils",
 ]
 
