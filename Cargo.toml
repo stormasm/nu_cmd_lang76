@@ -36,6 +36,7 @@ miette = { version = "5.5.0", features = ["fancy-no-backtrace"] }
 nu-cli = { path = "./crates/nu-cli", version = "0.76.1" }
 #nu-color-config = { path = "./crates/nu-color-config", version = "0.76.1" }
 nu-cmd-lang = { path = "./crates/nu-cmd-lang", version = "0.76.1" }
+nu-cmd-lib = { path = "./crates/nu-cmd-lib", version = "0.76.1" }
 #nu-command = { path = "./crates/nu-command", version = "0.76.1" }
 nu-engine = { path = "./crates/nu-engine", version = "0.76.1" }
 #nu-json = { path = "./crates/nu-json", version = "0.76.1" }
