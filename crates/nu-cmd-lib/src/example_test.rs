@@ -10,6 +10,7 @@ pub fn test_examples(cmd: impl Command + 'static) {
 mod test_examples {
     //use crate::{Break, Describe, Mut};
     //use crate::{Echo, If, Let};
+    use crate::{ExportEnv, LetEnv};
     use nu_cmd_lang::example_support::{
         check_all_signature_input_output_types_entries_have_examples,
         check_example_evaluates_to_expected_output,
@@ -68,6 +69,8 @@ mod test_examples {
             working_set.add_decl(Box::new(Let));
             working_set.add_decl(Box::new(Mut));
             */
+            working_set.add_decl(Box::new(ExportEnv));
+            working_set.add_decl(Box::new(LetEnv));
             // Adding the command that is being tested to the working set
             working_set.add_decl(cmd);
 
